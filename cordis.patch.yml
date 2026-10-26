@@ -1,0 +1,7 @@
+# One composition layer for this package: the host half's Loader row.
+#
+# The browser half is discovered from this row's package (`dsh.client.platform:
+# web` + the `./client` export), so the row must exist for the menu to load.
+- insert:
+    - id: dsh-right
+      name: 'dsh-right'

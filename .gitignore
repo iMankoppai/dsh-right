@@ -1,0 +1,6 @@
+node_modules/
+lib/*.map
+*.tgz
+_tmp/
+.DS_Store
+Thumbs.db

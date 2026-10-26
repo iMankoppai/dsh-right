@@ -1,0 +1,62 @@
+{
+  "name": "dsh-right",
+  "version": "0.2.3",
+  "description": "DSH Web 文件/链接右键菜单：预览、用默认程序或指定程序打开、在资源管理器中定位、复制路径/文件名/文件内容、另存为。 · Codex-style right-click menu for files and links in the DSH web GUI.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./icon": "./icon.svg",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "assets/nav-icon.png",
+    "scripts",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prebuild": "node scripts/build-nav-icon.mjs",
+    "icon": "node scripts/build-nav-icon.mjs",
+    "prepack": "node scripts/build-nav-icon.mjs && node scripts/build.mjs",
+    "test": "node scripts/build.mjs && node --test test/*.test.mjs",
+    "test:browser": "node test/dialogs.browser.mjs",
+    "check": "node scripts/build.mjs && node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "context-menu",
+    "right-click",
+    "file-menu"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "node": "^22.15.0 || >=24.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.10",
+    "jsdom": "^27.0.0",
+    "playwright-core": "^1.64.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

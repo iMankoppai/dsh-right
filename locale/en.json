@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Right-click menu",
+    "description": "A context menu for files and links in the DSH web GUI: preview, open in the default or a chosen app, reveal in the file manager, copy the path / relative path / name / file contents, and save a copy. Links can open in the sidebar browser or the system browser."
+  }
+}
